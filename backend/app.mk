@@ -55,7 +55,7 @@ GOFLAGS ?= -ldflags "-X main.version=$(VERSION)"
 
 APP_RELATIVE_PATH=$(shell a=`basename $$PWD` && cd .. && b=`basename $$PWD` && echo $$b/$$a)
 APP_NAME=$(shell echo $(APP_RELATIVE_PATH) | sed -En "s/\//-/p")
-APP_DOCKER_IMAGE=$(shell echo $(APP_NAME) |awk -F '@' '{print "restroom-system/" $$0 ":0.1.0"}')
+APP_DOCKER_IMAGE=$(shell echo $(APP_NAME) |awk -F '@' '{print "go-cms/" $$0 ":0.1.0"}')
 
 
 .PHONY: dep build clean docker gen ent wire api openapi run test cover vet lint app
@@ -121,10 +121,15 @@ clean:
 	$(if $(IS_WINDOWS), del "coverage.out", rm -f "coverage.out")
 
 # build docker image
-docker:
-	@docker build -t $(APP_DOCKER_IMAGE) . \
-				  -f ../../../.docker/Dockerfile \
-				  --build-arg APP_RELATIVE_PATH=$(APP_RELATIVE_PATH) GRPC_PORT=9000 REST_PORT=8000
+docker: build
+	pwd && docker build \
+		--no-cache \
+		-t $(APP_DOCKER_IMAGE) \
+		-f ../../../.docker/Dockerfile \
+		--build-arg APP_RELATIVE_PATH=$(APP_RELATIVE_PATH) \
+		--build-arg GRPC_PORT=9000 \
+		--build-arg REST_PORT=8000 \
+	 	.
 
 # build service app
 app: api wire ent build
