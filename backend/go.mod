@@ -21,6 +21,7 @@ require (
 	github.com/tx7do/go-utils v1.1.13
 	github.com/tx7do/go-utils/entgo v1.1.18
 	github.com/tx7do/kratos-authn v1.1.2
+	github.com/tx7do/kratos-authn/engine/jwt v1.1.2
 	github.com/tx7do/kratos-authn/middleware v1.1.3
 	github.com/tx7do/kratos-authz v1.0.2
 	github.com/tx7do/kratos-authz/middleware v1.0.2
@@ -28,7 +29,9 @@ require (
 	github.com/tx7do/kratos-bootstrap/bootstrap v0.0.13
 	github.com/tx7do/kratos-bootstrap/cache/redis v0.0.8
 	github.com/tx7do/kratos-bootstrap/oss/minio v0.0.8
+	github.com/tx7do/kratos-bootstrap/registry v0.0.8
 	github.com/tx7do/kratos-bootstrap/rpc v0.0.9
+	github.com/tx7do/kratos-swagger-ui v0.0.0-20241213153527-eca591f9f8b2
 	google.golang.org/genproto/googleapis/api v0.0.0-20241118233622-e639e219e697
 	google.golang.org/grpc v1.68.0
 	google.golang.org/protobuf v1.35.2
@@ -96,6 +99,7 @@ require (
 	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang-jwt/jwt/v5 v5.2.1 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/gnostic-models v0.6.9-0.20230804172637-c7be7c783f49 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
@@ -104,6 +108,7 @@ require (
 	github.com/gorilla/handlers v1.5.2 // indirect
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
+	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.23.0 // indirect
 	github.com/hashicorp/consul/api v1.30.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
@@ -172,15 +177,16 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.19.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
+	github.com/swaggest/swgui v1.8.2 // indirect
 	github.com/tencentcloud/tencentcloud-cls-sdk-go v1.0.11 // indirect
 	github.com/tinylib/msgp v1.2.4 // indirect
 	github.com/tklauser/go-sysconf v0.3.14 // indirect
 	github.com/tklauser/numcpus v0.9.0 // indirect
 	github.com/tx7do/kratos-bootstrap/config v0.0.8 // indirect
 	github.com/tx7do/kratos-bootstrap/logger v0.0.8 // indirect
-	github.com/tx7do/kratos-bootstrap/registry v0.0.8 // indirect
 	github.com/tx7do/kratos-bootstrap/tracer v0.0.8 // indirect
 	github.com/tx7do/kratos-bootstrap/utils v0.1.2 // indirect
+	github.com/vearutop/statigz v1.4.3 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	github.com/zclconf/go-cty v1.15.1 // indirect
